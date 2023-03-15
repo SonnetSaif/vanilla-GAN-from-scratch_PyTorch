@@ -53,3 +53,19 @@ class Discriminator(nn.Module):
         x = F.leaky_relu(self.fc3(x),0.2)
         x = F.sigmoid(self.fc4(x))
         return x
+
+
+generator = Generator()
+discriminator = Discriminator()
+
+loss_func = torch.nn.BCELoss()
+
+optimizer_G = torch.optim.Adam(generator.parameters(), lr=0.0002,betas=(0.4,0.999))
+optimizer_D = torch.optim.Adam(discriminator.parameters(), lr=0.0002,betas=(0.4,0.999))
+
+if torch.cuda.is_available():
+    generator.cuda()
+    discriminator.cuda()
+    loss_func.cuda()
+
+Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
