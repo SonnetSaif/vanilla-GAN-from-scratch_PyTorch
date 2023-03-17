@@ -48,7 +48,7 @@ class Discriminator(nn.Module):
 
     def forward(self, x):
         x = x.view(x.size(0),-1)
-        x = F.leaky_relu( self.fc1(x),0.2)
+        x = F.leaky_relu(self.fc1(x),0.2)
         x = F.leaky_relu(self.fc2(x),0.2)
         x = F.leaky_relu(self.fc3(x),0.2)
         x = F.sigmoid(self.fc4(x))
@@ -63,9 +63,57 @@ loss_func = torch.nn.BCELoss()
 optimizer_G = torch.optim.Adam(generator.parameters(), lr=0.0002,betas=(0.4,0.999))
 optimizer_D = torch.optim.Adam(discriminator.parameters(), lr=0.0002,betas=(0.4,0.999))
 
+# optimizer_G = torch.optim.SGD(generator.parameters(), lr=0.0002, momentum=0.9)
+# optimizer_D = torch.optim.SGD(discriminator.parameters(), lr=0.0002, momentum=0.9)
+
 if torch.cuda.is_available():
     generator.cuda()
     discriminator.cuda()
     loss_func.cuda()
 
 Tensor = torch.cuda.FloatTensor if torch.cuda.is_available() else torch.FloatTensor
+
+dataset = torch.utils.data.DataLoader(
+    datasets.MNIST('data/', train=True, download=True,
+                   transform=transforms.Compose([
+                       transforms.ToTensor(),
+                       transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
+                   ])),batch_size=64, shuffle=True)
+
+
+for epoch in range(50):
+    for i, (imgs, _) in enumerate(dataset):
+
+        #ground truths
+        valid = Tensor(imgs.size(0), 1).fill_(1.0)
+        fake = Tensor(imgs.size(0), 1).fill_(0.0)
+
+        real_imgs = imgs.cuda()
+
+        optimizer_G.zero_grad()
+
+        gen_input = Tensor(np.random.normal(0, 1, (imgs.shape[0],100)))
+
+        gen = generator(gen_input)
+
+        #measure of generator's ability to fool discriminator
+        g_loss = loss_func(discriminator(gen), valid)
+
+        g_loss.backward()
+        optimizer_G.step()
+
+        optimizer_D.zero_grad()
+
+        real_loss = loss_func(discriminator(real_imgs), valid)
+        fake_loss = loss_func(discriminator(gen.detach()), fake)
+        d_loss = (real_loss + fake_loss) / 2
+
+        d_loss.backward()
+        optimizer_D.step()
+
+        print ("[Epoch %d/%d] [Batch %d/%d] [D loss: %f] [G loss: %f]" % (epoch, 20, i, len(dataset),
+                                                            d_loss.item(), g_loss.item()))
+
+        total_batch = epoch * len(dataset) + i
+        if total_batch % 400 == 0:
+            save_image(gen.data[:25], 'output/%d.png' % total_batch, nrow=5, normalize=True)
