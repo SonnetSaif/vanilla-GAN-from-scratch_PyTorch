@@ -96,7 +96,6 @@ for epoch in range(50):
 
         gen = generator(gen_input)
 
-        #measure of generator's ability to fool discriminator
         g_loss = loss_func(discriminator(gen), valid)
 
         g_loss.backward()
