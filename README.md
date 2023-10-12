@@ -57,7 +57,8 @@ This project utilizes the MNIST dataset, a widely used benchmark dataset for han
 
 ### Source
 
-The dataset is available directly through the torchvision library in PyTorch. Also, available at [huggingface](https://huggingface.co/datasets/mnist).
+- The dataset is available directly through the torchvision library in PyTorch
+- Also, available at [huggingface](https://huggingface.co/datasets/mnist)
 
 
 ## Results
@@ -68,7 +69,7 @@ If you'd like to contribute or have any suggestions for this project, feel free 
 
 
 ## License
-This project is licensed under the MIT License.
+- This project is licensed under the MIT License.
 
 
 ## Citation
