@@ -43,3 +43,24 @@ pip install -r requirements.txt
 ### Usage
 - Just simply execute the vanilla_GAN_PyTorch.ipynb file cell by cell in Google Colab/Jupyter Notebook
 
+
+## Results
+
+
+## Contributing
+If you'd like to contribute or have any suggestions to this project, feel free to open an issue or create a pull request. Contributions are welcome!
+
+
+## License
+This project is licensed under the MIT License.
+
+
+## Citation
+If you use this code in your research, please cite the original GAN paper:
+@article{goodfellow2014generative,
+  title={Generative adversarial nets},
+  author={Goodfellow, Ian and Pouget-Abadie, Jean and Mirza, Mehdi and Xu, Bing and Warde-Farley, David and Ozair, Sherjil and Courville, Aaron and Bengio, Yoshua},
+  journal={Advances in neural information processing systems},
+  volume={27},
+  year={2014}
+}
