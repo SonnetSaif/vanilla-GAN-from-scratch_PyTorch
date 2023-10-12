@@ -1,16 +1,21 @@
-# Original GAN Implementation
+# Vanilla GAN Implementation
 
-This repository contains an implementation of the Generative Adversarial Network (GAN) based on the original paper [Generative Adversarial Networks by Ian Goodfellow et al.](https://arxiv.org/abs/1406.2661).  
+This repository contains an implementation of the Generative Adversarial Network (GAN) based on the original paper [Generative Adversarial Networks by Ian Goodfellow et al.](https://arxiv.org/abs/1406.2661) 
 The code is written in PyTorch and aims to generate realistic images using a GAN architecture.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
+- [Vanilla GAN Implementation](#vanilla-gan-implementation)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+    - [Usage](#usage)
+  - [Results](#results)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Citation](#citation)
 
 ## Introduction
 
@@ -43,7 +48,7 @@ pip install -r requirements.txt
 ```
 
 ### Usage
-- Just simply execute the vanilla_GAN_PyTorch.ipynb file cell by cell in Google Colab/Jupyter Notebook
+- Just simply execute the **vanilla_GAN_PyTorch.ipynb** cell by cell in Google Colab/Jupyter Notebook
 
 
 ## Results
