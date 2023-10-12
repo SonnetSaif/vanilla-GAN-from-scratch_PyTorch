@@ -32,12 +32,13 @@ This implementation closely follows the original GAN paper, providing a solid fo
 ```bash
 git clone https://github.com/your_username/original-gan.git
 cd original-gan
+```
 
 2. Install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 ### Usage
 - Just simply execute the vanilla_GAN_PyTorch.ipynb file cell by cell in Google Colab/Jupyter Notebook
