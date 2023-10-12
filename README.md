@@ -39,7 +39,6 @@ This implementation closely follows the original GAN paper, though some minor ch
 
 ```bash
 git clone https://github.com/your_username/original-gan.git
-cd original-gan
 ```
 
 2. Install the required dependencies:
