@@ -38,7 +38,7 @@ This implementation closely follows the original GAN paper, though some minor ch
 1. Clone the repository:
 
 ```bash
-git clone [https://github.com/your_username/original-gan.git](https://github.com/SonnetSaif/vanilla-GAN-from-scratch_PyTorch.git)
+git clone https://github.com/SonnetSaif/vanilla-GAN-from-scratch_PyTorch.git
 ```
 
 2. Install the required dependencies:
