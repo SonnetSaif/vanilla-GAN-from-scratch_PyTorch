@@ -57,6 +57,7 @@ This project is licensed under the MIT License.
 
 ## Citation
 If you use this code in your research, please cite the original GAN paper:
+```bash
 @article{goodfellow2014generative,
   title={Generative adversarial nets},
   author={Goodfellow, Ian and Pouget-Abadie, Jean and Mirza, Mehdi and Xu, Bing and Warde-Farley, David and Ozair, Sherjil and Courville, Aaron and Bengio, Yoshua},
@@ -64,3 +65,4 @@ If you use this code in your research, please cite the original GAN paper:
   volume={27},
   year={2014}
 }
+```
