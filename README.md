@@ -1,6 +1,6 @@
 # Original GAN Implementation
 
-This repository contains an implementation of the Generative Adversarial Network (GAN) based on the original paper by Ian Goodfellow et al. The code is written in PyTorch and aims to generate realistic images using a GAN architecture.
+This repository contains an implementation of the Generative Adversarial Network (GAN) based on the original paper by Ian Goodfellow et al <href="https://arxiv.org/abs/1406.2661">.  The code is written in PyTorch and aims to generate realistic images using a GAN architecture.
 
 ## Table of Contents
 
@@ -15,7 +15,8 @@ This repository contains an implementation of the Generative Adversarial Network
 
 The Generative Adversarial Network (GAN) is a deep learning architecture that consists of two neural networks, a generator and a discriminator, which are trained simultaneously through adversarial training. The generator tries to create data that is indistinguishable from real data, while the discriminator tries to differentiate between real and generated data.
 
-This implementation closely follows the original GAN paper, providing a solid foundation for understanding and experimenting with GANs.
+This implementation closely follows the original GAN paper, though some minor changes have been made. 
+<!-- providing a solid foundation for understanding and experimenting with GANs. -->
 
 ## Getting Started
 
