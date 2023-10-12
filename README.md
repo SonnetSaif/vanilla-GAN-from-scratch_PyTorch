@@ -1,6 +1,6 @@
 # Original GAN Implementation
 
-This repository contains an implementation of the Generative Adversarial Network (GAN) based on the original paper by Ian Goodfellow et al <href="https://arxiv.org/abs/1406.2661">.  The code is written in PyTorch and aims to generate realistic images using a GAN architecture.
+This repository contains an implementation of the Generative Adversarial Network (GAN) based on the original paper by Ian Goodfellow et al <href src="https://arxiv.org/abs/1406.2661">.  The code is written in PyTorch and aims to generate realistic images using a GAN architecture.
 
 ## Table of Contents
 
