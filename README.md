@@ -51,6 +51,15 @@ pip install -r requirements.txt
 - Just simply execute the **vanilla_GAN_PyTorch.ipynb** cell by cell in Google Colab/Jupyter Notebook
 
 
+## Dataset
+
+This project utilizes the MNIST dataset, a widely used benchmark dataset for handwritten digit recognition. MNIST contains a training set of 60,000 grayscale images of handwritten digits (0 through 9) and a test set of 10,000 images. Each image is 28x28 pixels.
+
+### Source
+
+The dataset is available directly through the torchvision library in PyTorch. Also, available at [huggingface](https://huggingface.co/datasets/mnist).
+
+
 ## Results
 
 
