@@ -67,8 +67,8 @@ The dataset is available directly through the torchvision library in PyTorch. Al
 If you'd like to contribute or have any suggestions for this project, feel free to open an issue or create a pull request. Contributions are welcome!
 
 
-<!-- ## License
-This project is licensed under the MIT License. -->
+## License
+This project is licensed under the MIT License.
 
 
 ## Citation
