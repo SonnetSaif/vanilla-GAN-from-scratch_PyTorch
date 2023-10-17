@@ -73,7 +73,6 @@ If you'd like to contribute or have any suggestions for this project, feel free 
 
 
 ## Citation
-If you use this code in your research, please cite the original GAN paper:
 ```bash
 @article{goodfellow2014generative,
   title={Generative adversarial nets},
